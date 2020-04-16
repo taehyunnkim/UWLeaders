@@ -1,0 +1,21 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.primary {
+  color: #2C343B;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+h1 {
+  font-weight: 700;
+}
