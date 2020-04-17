@@ -3,6 +3,18 @@ body {
   font-weight: 500;
 }
 
+.container {
+  width: 80vw;
+}
+
+.mentors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px solid black;
+}
+
 .primary {
   color: #2C343B;
 }
@@ -18,4 +30,21 @@ body {
 
 h1 {
   font-weight: 700;
+}
+
+.card {
+  min-width: 500px;
+  max-width: 300px;
+  display: flex;
+}
+
+.card-content {
+  border: 1px solid black;
+  flex: 1;
+}
+
+.mentor-img {
+  border: 1px solid black;
+  width: 200px;
+  height: 100%;
 }
