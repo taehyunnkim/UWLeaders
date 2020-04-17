@@ -16,6 +16,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding: 30px 0px;
 }
 
 .primary {
@@ -46,14 +47,27 @@ h1 {
 }
 
 .card-content {
-  flex: 1;  
-  padding: 10px;
+  flex: 1;
+  padding: 20px!important;
+}
+
+.card-content p:first-of-type {
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.card-content p:last-child {
+  font-size: 0.8em;
+}
+
+.card-title {
+  margin-bottom: 3px!important;
 }
 
 .mentor-img {
   background-color: lightgray;
   width: 200px;
-  height: 250px;
+  height: 300px;
 }
 
 .add-mentor {

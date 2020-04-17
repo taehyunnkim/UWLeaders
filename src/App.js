@@ -7,6 +7,7 @@ import MentorsDashboard from './components/dashboards/MentorsDashboard';
 import ContactDashboard from './components/dashboards/ContactDashboard';
 import Navbar from './components/layout/Navbar';
 import AddMentor from './components/mentors/AddMentor';
+import LogIn from './components/auth/LogIn';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/mentors' component={MentorsDashboard} />
           <Route path='/contact' component={ContactDashboard} />
           <Route path='/add' component={AddMentor} />
+          <Route path='/login' component={LogIn} />
         </Switch>
       </div>
     </BrowserRouter>
