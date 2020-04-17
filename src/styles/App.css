@@ -12,7 +12,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: 1px solid black;
 }
 
 .primary {
@@ -35,16 +34,16 @@ h1 {
 .card {
   min-width: 500px;
   max-width: 300px;
+  height: 250px;
   display: flex;
 }
 
 .card-content {
-  border: 1px solid black;
   flex: 1;
 }
 
 .mentor-img {
-  border: 1px solid black;
+  border-right: 1px solid black;
   width: 200px;
   height: 100%;
 }
