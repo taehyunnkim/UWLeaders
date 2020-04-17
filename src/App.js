@@ -5,7 +5,8 @@ import HomeDashboard from './components/dashboards/HomeDashboard';
 import ProgramDashboard from './components/dashboards/ProgramDashboard';
 import MentorsDashboard from './components/dashboards/MentorsDashboard';
 import ContactDashboard from './components/dashboards/ContactDashboard';
-import Navbar from './components/layout/Navbar'
+import Navbar from './components/layout/Navbar';
+import AddMentor from './components/mentors/AddMentor';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/program' component={ProgramDashboard} />
           <Route path='/mentors' component={MentorsDashboard} />
           <Route path='/contact' component={ContactDashboard} />
+          <Route path='/add' component={AddMentor} />
         </Switch>
       </div>
     </BrowserRouter>

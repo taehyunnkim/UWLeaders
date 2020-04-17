@@ -5,9 +5,6 @@ export default function MentorList() {
   return (
     <div className='mentors'>
       <MentorSummary />
-      <MentorSummary />
-      <MentorSummary />
-      <MentorSummary />
     </div>
   )
 }
