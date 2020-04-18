@@ -1,10 +1,130 @@
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0.2em 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+strong {
+  font-weight: 700;
+}
+
+input {
+  width: 200px;
+}
+
+button {
+  border-width: 0px;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+}
+
+button:focus {
+  outline:0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+}
+
+nav ul {
+  display: inline-block;
+  margin-left: auto;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.1em;
+  padding-left: 30px;
+}
+
+nav li a {
+  font-weight: 700;
+  opacity: 0.4;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+nav li a:hover {
+  opacity: 1;
 }
 
 .container {
-  width: 80vw;
+  min-height: 100vh;
+  width: 75vw;
+  position: relative;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+.asuw {
+  position: absolute;
+  width: 150px;
+  left: 50px;
+  bottom: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+  padding: 15px 50px;
+  border-radius: 2px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  min-width: 150px;
+  opacity: 1;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.homeBtn {
+  margin-top: 30px;
+  background-color: #85754d;
+}
+
+.homeBtn:hover {
+  opacity: 1;
+  background-color: #b7a57a;
+}
+
+.home {
+  margin-top: 50px;
+}
+
+.card-update {
+  width: 100%;
+}
+
+.card-update button {
+  margin: 0px 20px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: rgb(255, 98, 98);
 }
 
 .form {
@@ -25,28 +145,12 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px 0px;
-}
-
-.primary {
-  color: #2C343B;
+  padding: 0 0 30px 0;
 }
 
 .active {
   font-weight: 700;
-}
-
-.title {
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
-.center {
-  margin: 0 auto 10px auto;
-}
-
-h1 {
-  font-weight: 700;
+  opacity: 1;
 }
 
 .card {
@@ -56,28 +160,32 @@ h1 {
   height: 300px;
   margin: 20px;
   display: flex;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .card-content {
   flex: 1;
-  padding: 20px!important;
+  padding: 20px;
 }
 
 .card-content p:first-of-type {
-  margin-bottom: 3px;
-  font-size: 12px;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: gray;
+  margin: 5px 0px;
 }
 
 .card-content p:last-child {
   font-size: 0.8em;
+  margin: 15px 0px;
+  font-weight: 400;
 }
 
 .card-title {
-  margin-bottom: 3px!important;
-}
-
-.description {
-  white-space: pre-wrap;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-bottom: 0px;
 }
 
 .mentor-img {
@@ -86,24 +194,18 @@ h1 {
   height: 300px;
 }
 
+.description {
+  white-space: pre-wrap;
+}
+
 .add-mentor {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -50px;
+  bottom: -70px;
   margin-left: auto; 
   margin-right: auto; 
   width: 100px;
-}
-
-.card-update {
-  text-align: center;
-  width: 100%;
-}
-
-.card-update button {
-  width: 100px;
-  margin: 0px 20px;
 }
 
 .mentor-textarea {
@@ -126,15 +228,11 @@ input[type="text"].major {
   margin: 0 auto;
 }
 
-.password-container h2 {
-  text-align: center;
-}
-
 input[type="password"].password {
   color: #4b2e83;
+  width: 100%;
   font-size:7em;
   padding: 50px 0;
-  border-bottom-width: 2px;
   text-align: center;
 }
 

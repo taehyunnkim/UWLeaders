@@ -15,7 +15,7 @@ export default function MentorSummary({mentor, imgRef, handleDelete, handleUpdat
       <UserContext.Consumer>
         {auth =>
           auth 
-            ? <div className='card-update'>
+            ? <div className='card-update text-center'>
                 <button className='btn black' onClick={() => {handleUpdate(mentor.name)}}>Edit</button>
                 <button className='btn red' onClick={() => {handleDelete(mentor.name)}}>Delete</button>
               </div>

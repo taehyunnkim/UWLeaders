@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <UserContext.Provider value={this.state.auth}>
         <BrowserRouter>
-          <div className="App">
+          <div className="App container">
             <Navbar />
             <Switch>
               <Route exact path={ROUTES.LANDING} render={(props) => <HomeDashboard {...props} handleSignout={this.handleSignout}/>}/>

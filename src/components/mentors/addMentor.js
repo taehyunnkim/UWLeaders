@@ -35,7 +35,7 @@ class AddMentor extends Component {
           <form>
             <input placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
             <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
-            <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='8' cols='30' wrap="hard"></textarea>
+            <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='8' cols='37' wrap="hard"></textarea>
             <input className='btn black add-mentor' onClick={this.handleClick} type='reset' value='Add'/>
           </form>
         </div>
