@@ -11,8 +11,6 @@ class LogInForm extends Component {
     this.setState({
       password: e.target.value
     });
-    console.log(this.state);
-    console.log(this.props);
   }
 
   handleSubmit = (e) => {

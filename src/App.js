@@ -24,10 +24,6 @@ class App extends Component {
     });
   }
 
-  componentWillUnmount() {
-    this.listener();
-  }
-
   handleSignout = () => {
     this.props.firebase.signOut();
   }
