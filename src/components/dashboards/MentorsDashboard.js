@@ -1,23 +1,91 @@
 import React, { Component } from 'react'
-import MentorList from '../mentors/MentorList';
+import MentorSummary from '../mentors/MentorSummary';
+import { withFirebase } from '../firebase/context';
+import UserContext from '../session/context';
+import AddMentor from '../mentors/AddMentor';
+import Loader from 'react-loader-spinner'
 
-export default class MentorsDashboard extends Component {
+class MentorsDashboard extends Component {
   state = {
-    mentors: [
-      {name: 'Jennifer Li', major: 'Informatics', description: 'Husky Tech, Informatics Undergraduate Student Association, Design For America, Peer Health Educator, Student Hall Council, Undergraduate Research, Indeed, Medzii, Seattle DUXX'},
-      {name: 'Roshni Sinha', major: 'Biological Anthropology, International Studies ', description: 'UWL, Undergraduate Research (Sex Trafficking in King County & HR & Forensic Anthropology in Latin America), Unite UW, FYP Community Leader (RA), Student Life (marketing), CURE UW, Voyage UW, Alpha Phi Omega, SIAH, Anth. Honors (International adoption), Refugee Women’s Alliance, US Department of Justice'},
-      {name: 'Marium Raza', major: 'Biochemistry', description: 'Undergraduate research @ Gordon Lab; URP; University District Street Medicine Volunteer Coordinator; Svoboda Project Intern; Mortar Board Honor Society President; UW Senior Class Gift Council Finance Administrator; I founded Elixir (elixirnonprofit.org), startup competitions, Young People For, American Medical Student Association, Race Ethnicity & Culture in Health, Volunteer at Seattle Childrens’'},
-      {name: 'Andre Menchavez', major: 'Law, Societies, & Justice', description: 'GLAAD Campus Ambassador, International Student Mentorship Program, The Daily Column Writer, ASUW UW Leaders, UW Hip Hop Student Association Dance Captain, Filipino American Student Association, FIG Leader, Dawg Daze Leader, Huskies@Work, Purple & Bold Dance Team, Mentor Power for Success Program, Expression Over Oppression, Queer LiberAsian, GLAAD Junior Editor, QueerSpace Magazine Content Creator'},
-      {name: 'Teanen Chen', major: 'Finance, Global Health', description: 'UWL Leader, Administrative Assistant to the Board of Directors, Social Media Intern with the Office of Outreach and Involvement, Director of the Office of Outreach and Involvement, Administrative Coordinator for Asian American Intervaristy , and VP of Professionalism for Delta Sigma Pi, Intern with Remarkably (women-owned tech in real estate), Finance Intern with Eileen Fisher (sustainable fashion company), Retail for Warby Parker, and Retail for Anthropologie'},
-      {name: 'Espen Scheuer', major: 'Human Centered Design & Engineering', description: 'ASUW Board of Directors, Campus Sustainability Fund, Provost Advisory Committee for Students, College of Engineering Student Advisory Council, Student Technology Fee Committee, Research'}
-    ]
+    mentors: [],
+    loading: true
+  }
+
+  componentDidMount = () => {
+    const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
+    docRef.get().then(doc => {
+      if (doc.exists) {
+          const mentors = doc.data().mentors;
+          this.setState({mentors, loading: !this.state.loading});
+      } else {
+          console.log("No such document!");
+      }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
+  }
+
+  handleChange = (mentor) => {
+    this.setState({mentors: [...this.state.mentors, mentor]}, console.log(this.state));
+  }
+
+  handleDelete = (name) => {
+    const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
+    const updatedList = this.state.mentors.filter(mentor => {
+      return name !== mentor.name;
+    });
+
+    docRef.set({
+      mentors: updatedList
+    }).then(() => {
+      console.log('Deleted ' + name);
+      this.setState({mentors: updatedList});
+    }).catch(err => {
+      console.log(err);
+    })
+
+  }
+
+  handleUpdate = (name) => {
+    const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
+    const updatedList = this.state.mentors.filter(mentor => {
+      return name !== mentor.name;
+    });
+
+    docRef.set({
+      mentors: updatedList
+    }).then(() => {
+      console.log('Deleted ' + name);
+      this.setState({mentors: updatedList});
+    }).catch(err => {
+      console.log(err);
+    })
+
   }
 
   render() {
     return (
       <div className='container'>
-        <MentorList mentors={this.state.mentors} />
+        <div className='mentors'>
+          {this.state.loading 
+            ? <Loader type="Grid" color="#4b2e83" height={60} width={60} />
+            : this.state.mentors && this.state.mentors.map(mentor => {
+                return(
+                  <div key={mentor.name}>
+                    <MentorSummary mentor={mentor} imgRef={mentor.name.replace(/\s+/g,'').toLowerCase()} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate} />
+                  </div>
+                )
+          })}
+          <UserContext.Consumer>
+            {auth => 
+              !this.state.loading && auth
+                ? <AddMentor mentors={this.state.mentors} handleChange={this.handleChange} />
+                : null}
+          </UserContext.Consumer>
+        </div>
       </div>
     )
   }
 }
+
+export default withFirebase(MentorsDashboard);

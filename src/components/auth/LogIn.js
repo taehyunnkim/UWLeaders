@@ -21,19 +21,17 @@ class LogInForm extends Component {
         console.log('Logged In');
       })
       .catch(error => {
-        console.log(error);
+        document.getElementById('password').innerText = 'Incorrect Password';
       });
     e.preventDefault();
   }
 
   render() {
     return (
-      <div className='form'>
-        <form onSubmit={this.handleSubmit} className='white'>
-          <div className='input-field'>
-            <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange} />
-          </div>
+      <div className='password-container'>
+        <h2 id='password'>Admin Password</h2>
+        <form onSubmit={this.handleSubmit}>
+          <input className='password' autoComplete='off' type='password' id='password' onChange={this.handleChange} />
         </form>
       </div>
     )

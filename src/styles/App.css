@@ -10,12 +10,21 @@ body {
 .form {
   margin: 50px;
 }
+.status {
+  font-size: 0.5em;
+}
+
+.nav-wrapper {
+  margin-bottom: 50px;
+}
 
 .mentors {
+  width: 65vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 30px 0px;
 }
 
@@ -41,8 +50,11 @@ h1 {
 }
 
 .card {
+  position: relative;
   min-width: 500px;
   max-width: 300px;
+  height: 300px;
+  margin: 20px;
   display: flex;
 }
 
@@ -64,6 +76,10 @@ h1 {
   margin-bottom: 3px!important;
 }
 
+.description {
+  white-space: pre-wrap;
+}
+
 .mentor-img {
   background-color: lightgray;
   width: 200px;
@@ -71,13 +87,67 @@ h1 {
 }
 
 .add-mentor {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  margin-left: auto; 
+  margin-right: auto; 
   width: 100px;
+}
+
+.card-update {
+  text-align: center;
+  width: 100%;
+}
+
+.card-update button {
+  width: 100px;
+  margin: 0px 20px;
+}
+
+.mentor-textarea {
+  margin-top: 10px;
+  height: 100%;
+  resize: none;
+}
+
+input[type='text'] {
+  padding: 0px;
+}
+
+input[type="text"].major {
+  font-size:0.8em;
+  color: gray;
+}
+
+.password-container {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.password-container h2 {
+  text-align: center;
+}
+
+input[type="password"].password {
+  color: #4b2e83;
+  font-size:7em;
+  padding: 50px 0;
+  border-bottom-width: 2px;
+  text-align: center;
 }
 
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
-input[type=password]:not(.browser-default):focus:not([readonly]),
-textarea.materialize-textarea:focus:not([readonly]){
-  border-color: #ec407a;
+textarea.mentor-textarea:focus:not([readonly]){
+  border-color: black;
+  border-bottom-width: 1px;
+  box-shadow: none;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]){
+  border-color: #4b2e83;
+  border-bottom-width: 2px;
   box-shadow: none;
 }
