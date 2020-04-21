@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "afe9c219dbd18295ed2a5380f1306802",
+    "revision": "fd183f40206ec6968da6e451f4f6a269",
     "url": "/UWLeaders/index.html"
   },
   {
-    "revision": "8e8e7622a98d5d27f248",
-    "url": "/UWLeaders/static/css/main.744009b2.chunk.css"
+    "revision": "ba617929990291d00b68",
+    "url": "/UWLeaders/static/css/main.41d678ad.chunk.css"
   },
   {
     "revision": "128f435e550b9fe823c0",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/UWLeaders/static/js/2.602a571d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8e8e7622a98d5d27f248",
-    "url": "/UWLeaders/static/js/main.f68a373d.chunk.js"
+    "revision": "ba617929990291d00b68",
+    "url": "/UWLeaders/static/js/main.cf3ba300.chunk.js"
   },
   {
     "revision": "b77bfbe4cd745660b743",
     "url": "/UWLeaders/static/js/runtime-main.ede5627c.js"
   },
   {
-    "revision": "cad79d7b0e005e0fcb576cb9dc65439b",
-    "url": "/UWLeaders/static/media/uwleaders.cad79d7b.svg"
+    "revision": "0bf9086abc9c62f61221595120bfb78d",
+    "url": "/UWLeaders/static/media/uwl-logo.0bf9086a.png"
   }
 ]);
