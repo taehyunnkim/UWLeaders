@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/UWLeaders/static/css/main.744009b2.chunk.css",
+    "main.js": "/UWLeaders/static/js/main.217a6fee.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.217a6fee.chunk.js.map",
+    "runtime-main.js": "/UWLeaders/static/js/runtime-main.ede5627c.js",
+    "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.ede5627c.js.map",
+    "static/js/2.602a571d.chunk.js": "/UWLeaders/static/js/2.602a571d.chunk.js",
+    "static/js/2.602a571d.chunk.js.map": "/UWLeaders/static/js/2.602a571d.chunk.js.map",
+    "index.html": "/UWLeaders/index.html",
+    "precache-manifest.bef07fbbc3e14785f77afdcc41db8bde.js": "/UWLeaders/precache-manifest.bef07fbbc3e14785f77afdcc41db8bde.js",
+    "service-worker.js": "/UWLeaders/service-worker.js",
+    "static/css/main.744009b2.chunk.css.map": "/UWLeaders/static/css/main.744009b2.chunk.css.map",
+    "static/js/2.602a571d.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.602a571d.chunk.js.LICENSE.txt",
+    "static/media/uwleaders.svg": "/UWLeaders/static/media/uwleaders.cad79d7b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ede5627c.js",
+    "static/js/2.602a571d.chunk.js",
+    "static/css/main.744009b2.chunk.css",
+    "static/js/main.217a6fee.chunk.js"
+  ]
+}
