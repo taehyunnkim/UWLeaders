@@ -9,8 +9,8 @@ export default function Navbar() {
       <UserContext.Consumer> 
         {auth =>
           auth 
-          ? <Link to={ROUTES.LANDING} className='title'>UW Leaders <span className='status'>/ ADMIN</span></Link> 
-          : <Link to={ROUTES.LANDING} className='title'>UW Leaders</Link>
+          ? <Link to={ROUTES.LANDING} className='title'><span>UW</span> Leaders <span className='status'>/ ADMIN</span></Link> 
+          : <Link to={ROUTES.LANDING} className='title'><span>UW</span> Leaders</Link>
         }
       </UserContext.Consumer>
       <ul className='right'>

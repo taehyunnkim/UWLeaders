@@ -5,11 +5,10 @@ export default function MentorSummary({mentor, imgRef, handleDelete, handleUpdat
   return (
     <div>
       <div className='card z-dept-0 project-summary'>
-        <img className='mentor-img' src={'/images/mentors/' + imgRef + '.jpg'} alt={mentor.name} />
+        <div className='mentor-img'></div>
         <div className='card-content grey-text text-darken-3'>
           <span className='card-title'>{mentor.name}</span>
           <p className='grey-text'>{mentor.major}</p>
-          <p className='description'>{mentor.description}</p>
         </div>
       </div>
       <UserContext.Consumer>
