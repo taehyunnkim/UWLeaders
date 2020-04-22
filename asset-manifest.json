@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/UWLeaders/static/css/main.41d678ad.chunk.css",
-    "main.js": "/UWLeaders/static/js/main.de8740ac.chunk.js",
-    "main.js.map": "/UWLeaders/static/js/main.de8740ac.chunk.js.map",
-    "runtime-main.js": "/UWLeaders/static/js/runtime-main.ede5627c.js",
-    "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.ede5627c.js.map",
-    "static/js/2.60c773f2.chunk.js": "/UWLeaders/static/js/2.60c773f2.chunk.js",
-    "static/js/2.60c773f2.chunk.js.map": "/UWLeaders/static/js/2.60c773f2.chunk.js.map",
-    "index.html": "/UWLeaders/index.html",
-    "precache-manifest.6a01311aa78492ec6a8d892ebe16739f.js": "/UWLeaders/precache-manifest.6a01311aa78492ec6a8d892ebe16739f.js",
-    "service-worker.js": "/UWLeaders/service-worker.js",
-    "static/css/main.41d678ad.chunk.css.map": "/UWLeaders/static/css/main.41d678ad.chunk.css.map",
-    "static/js/2.60c773f2.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.60c773f2.chunk.js.LICENSE.txt",
-    "static/media/uwl-logo.png": "/UWLeaders/static/media/uwl-logo.0bf9086a.png"
+    "main.css": "/static/css/main.41d678ad.chunk.css",
+    "main.js": "/static/js/main.06c9b296.chunk.js",
+    "main.js.map": "/static/js/main.06c9b296.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f3368db2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f3368db2.js.map",
+    "static/js/2.60c773f2.chunk.js": "/static/js/2.60c773f2.chunk.js",
+    "static/js/2.60c773f2.chunk.js.map": "/static/js/2.60c773f2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3b07c821fabc7151b076985bcbc7d8e2.js": "/precache-manifest.3b07c821fabc7151b076985bcbc7d8e2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.41d678ad.chunk.css.map": "/static/css/main.41d678ad.chunk.css.map",
+    "static/js/2.60c773f2.chunk.js.LICENSE.txt": "/static/js/2.60c773f2.chunk.js.LICENSE.txt",
+    "static/media/uwl-logo.png": "/static/media/uwl-logo.0bf9086a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ede5627c.js",
+    "static/js/runtime-main.f3368db2.js",
     "static/js/2.60c773f2.chunk.js",
     "static/css/main.41d678ad.chunk.css",
-    "static/js/main.de8740ac.chunk.js"
+    "static/js/main.06c9b296.chunk.js"
   ]
 }
