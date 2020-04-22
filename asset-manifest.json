@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/UWLeaders/Home/static/css/main.41d678ad.chunk.css",
-    "main.js": "/UWLeaders/Home/static/js/main.a2f6533d.chunk.js",
-    "main.js.map": "/UWLeaders/Home/static/js/main.a2f6533d.chunk.js.map",
-    "runtime-main.js": "/UWLeaders/Home/static/js/runtime-main.4feb8ae0.js",
-    "runtime-main.js.map": "/UWLeaders/Home/static/js/runtime-main.4feb8ae0.js.map",
-    "static/js/2.60c773f2.chunk.js": "/UWLeaders/Home/static/js/2.60c773f2.chunk.js",
-    "static/js/2.60c773f2.chunk.js.map": "/UWLeaders/Home/static/js/2.60c773f2.chunk.js.map",
-    "index.html": "/UWLeaders/Home/index.html",
-    "precache-manifest.17fac1aaa070d01542840d237b86753d.js": "/UWLeaders/Home/precache-manifest.17fac1aaa070d01542840d237b86753d.js",
-    "service-worker.js": "/UWLeaders/Home/service-worker.js",
-    "static/css/main.41d678ad.chunk.css.map": "/UWLeaders/Home/static/css/main.41d678ad.chunk.css.map",
-    "static/js/2.60c773f2.chunk.js.LICENSE.txt": "/UWLeaders/Home/static/js/2.60c773f2.chunk.js.LICENSE.txt",
-    "static/media/uwl-logo.png": "/UWLeaders/Home/static/media/uwl-logo.0bf9086a.png"
+    "main.css": "/UWLeaders/static/css/main.41d678ad.chunk.css",
+    "main.js": "/UWLeaders/static/js/main.6ba56aab.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.6ba56aab.chunk.js.map",
+    "runtime-main.js": "/UWLeaders/static/js/runtime-main.ede5627c.js",
+    "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.ede5627c.js.map",
+    "static/js/2.60c773f2.chunk.js": "/UWLeaders/static/js/2.60c773f2.chunk.js",
+    "static/js/2.60c773f2.chunk.js.map": "/UWLeaders/static/js/2.60c773f2.chunk.js.map",
+    "index.html": "/UWLeaders/index.html",
+    "precache-manifest.f4095c1c090df6a16b4fb52652618c87.js": "/UWLeaders/precache-manifest.f4095c1c090df6a16b4fb52652618c87.js",
+    "service-worker.js": "/UWLeaders/service-worker.js",
+    "static/css/main.41d678ad.chunk.css.map": "/UWLeaders/static/css/main.41d678ad.chunk.css.map",
+    "static/js/2.60c773f2.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.60c773f2.chunk.js.LICENSE.txt",
+    "static/media/uwl-logo.png": "/UWLeaders/static/media/uwl-logo.0bf9086a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4feb8ae0.js",
+    "static/js/runtime-main.ede5627c.js",
     "static/js/2.60c773f2.chunk.js",
     "static/css/main.41d678ad.chunk.css",
-    "static/js/main.a2f6533d.chunk.js"
+    "static/js/main.6ba56aab.chunk.js"
   ]
 }
