@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import './styles/App.css';
 import { UserContext } from './components/session/session';
 import { withFirebase } from './components/firebase/firebase';
@@ -34,7 +34,7 @@ class App extends Component {
   render () {
     return (
       <UserContext.Provider value={this.state.auth}>
-        <BrowserRouter>
+        <HashRouter basename='/'>
           <div className="App container">
             <Navbar />
             <Switch>
@@ -46,7 +46,7 @@ class App extends Component {
               <Route path={ROUTES.ADMIN} component={LogIn} />
             </Switch>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </UserContext.Provider>
     );
   }
