@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/UWLeaders/static/css/main.41d678ad.chunk.css",
-    "main.js": "/UWLeaders/static/js/main.cf3ba300.chunk.js",
-    "main.js.map": "/UWLeaders/static/js/main.cf3ba300.chunk.js.map",
+    "main.js": "/UWLeaders/static/js/main.de8740ac.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.de8740ac.chunk.js.map",
     "runtime-main.js": "/UWLeaders/static/js/runtime-main.ede5627c.js",
     "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.ede5627c.js.map",
-    "static/js/2.602a571d.chunk.js": "/UWLeaders/static/js/2.602a571d.chunk.js",
-    "static/js/2.602a571d.chunk.js.map": "/UWLeaders/static/js/2.602a571d.chunk.js.map",
+    "static/js/2.60c773f2.chunk.js": "/UWLeaders/static/js/2.60c773f2.chunk.js",
+    "static/js/2.60c773f2.chunk.js.map": "/UWLeaders/static/js/2.60c773f2.chunk.js.map",
     "index.html": "/UWLeaders/index.html",
-    "precache-manifest.1ea684fe82bc3c526ced37fd3fd84821.js": "/UWLeaders/precache-manifest.1ea684fe82bc3c526ced37fd3fd84821.js",
+    "precache-manifest.6a01311aa78492ec6a8d892ebe16739f.js": "/UWLeaders/precache-manifest.6a01311aa78492ec6a8d892ebe16739f.js",
     "service-worker.js": "/UWLeaders/service-worker.js",
     "static/css/main.41d678ad.chunk.css.map": "/UWLeaders/static/css/main.41d678ad.chunk.css.map",
-    "static/js/2.602a571d.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.602a571d.chunk.js.LICENSE.txt",
+    "static/js/2.60c773f2.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.60c773f2.chunk.js.LICENSE.txt",
     "static/media/uwl-logo.png": "/UWLeaders/static/media/uwl-logo.0bf9086a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ede5627c.js",
-    "static/js/2.602a571d.chunk.js",
+    "static/js/2.60c773f2.chunk.js",
     "static/css/main.41d678ad.chunk.css",
-    "static/js/main.cf3ba300.chunk.js"
+    "static/js/main.de8740ac.chunk.js"
   ]
 }
