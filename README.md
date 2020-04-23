@@ -1,5 +1,4 @@
 # In Development
 
-[Home](https://www.erickim.dev/UWLeaders/#/UWLeaders/)
-
-[Admin](https://www.erickim.dev/UWLeaders/#/UWLeaders/admin)
+## [Home Page](https://uwl.erickim.dev) 
+## [Admin Page](https://uwl.erickim.dev/#/admin)
