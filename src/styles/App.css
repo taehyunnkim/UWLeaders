@@ -115,7 +115,7 @@ nav li a:hover {
 }
 
 .homeBtn {
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #4b2e83;
 }
 
@@ -127,10 +127,6 @@ nav li a:hover {
 
 .homeBtn:hover:after{
   margin-left: 15px;
-}
-
-.homeBtn:hover {
-  opacity: 0.9;
 }
 
 .home {
@@ -146,9 +142,10 @@ nav li a:hover {
   margin: 50px;
 }
 
-.home div:first-child {
+.home section, .home button {
   opacity: 0;
 }
+
 .card-update {
   width: 100%;
 }

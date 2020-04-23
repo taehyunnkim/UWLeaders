@@ -13,8 +13,13 @@ class HomeDashboard extends Component {
       ease: Power4.easeIn
     });
     gsap.from(this.content, 1, {
-      y: 30,
+      y: -30,
       ease: Power4
+    });
+    gsap.to(this.btn, 0.5, {
+      opacity: 1,
+      delay: 0.6,
+      ease: Power4.easeIn
     });
     document.addEventListener('mousemove', this.parallax);
   }
@@ -41,14 +46,16 @@ class HomeDashboard extends Component {
   render(){
     return (
       <div className='home'>
-        <div ref={div => (this.content = div)}>
-          <h1>Leaders Are <strong>Made</strong></h1>
-          <h1>Not Born.</h1>
+        <div>
+          <section ref={section => (this.content = section)}>
+            <h1>Leaders Are <strong>Made</strong></h1>
+            <h1>Not Born.</h1>
+          </section>
           <UserContext.Consumer>
             {auth => 
               auth
-                ? <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
-                : <button className='btn-large homeBtn' onClick={this.props.handleSignout}>JOIN US</button>
+                ? <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
+                : <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Join Us</button>
                 }
           </UserContext.Consumer>
         </div>
