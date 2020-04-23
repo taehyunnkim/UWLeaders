@@ -34,7 +34,7 @@ class AddMentor extends Component {
   render() {
     return (
       <section id='add-container'>
-        <div className='card'>
+        <div className='card shadow'>
           <img className='mentor-img' alt='' />
           <div className='card-content grey-text text-darken-3'>
             <span className='card-title'>{this.state.name}</span>
