@@ -105,7 +105,7 @@ nav li a:hover {
   padding: 15px 40px;
   border-radius: 2px;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  width: 150px;
+  width: 170px;
   opacity: 1;
 }
 
@@ -119,22 +119,36 @@ nav li a:hover {
   background-color: #4b2e83;
 }
 
+.homeBtn:after {
+  content: "\2192";
+  margin-left: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.homeBtn:hover:after{
+  margin-left: 15px;
+}
+
 .homeBtn:hover {
   opacity: 0.9;
 }
 
 .home {
   width: 90%;
-  margin: 50px auto;
+  margin: 30px auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .home div {
-  padding: 60px;
+  padding: 30px;
+  margin: 50px;
 }
 
+.home div:first-child {
+  opacity: 0;
+}
 .card-update {
   width: 100%;
 }
@@ -143,9 +157,23 @@ nav li a:hover {
   margin: 0px 10px;
 }
 
+.logo {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
 .logo img {
-  width: 400px;
-  height: 400px;
+  position: absolute;
+  right: 0;
+}
+
+.logo img:first-child {
+  bottom: -50px;
+}
+
+.logo img:last-child {
+  z-index: -100;
 }
 
 .black {
