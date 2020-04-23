@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.95a81a23.chunk.css",
-    "main.js": "/static/js/main.89b13e71.chunk.js",
-    "main.js.map": "/static/js/main.89b13e71.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f3368db2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f3368db2.js.map",
-    "static/js/2.42c7cae5.chunk.js": "/static/js/2.42c7cae5.chunk.js",
-    "static/js/2.42c7cae5.chunk.js.map": "/static/js/2.42c7cae5.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.032f038bc9343154f857be92a189752c.js": "/precache-manifest.032f038bc9343154f857be92a189752c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.95a81a23.chunk.css.map": "/static/css/main.95a81a23.chunk.css.map",
-    "static/js/2.42c7cae5.chunk.js.LICENSE.txt": "/static/js/2.42c7cae5.chunk.js.LICENSE.txt",
-    "static/media/logo-bg.png": "/static/media/logo-bg.d2581bd3.png",
-    "static/media/logo-fg.png": "/static/media/logo-fg.b3e164c4.png"
+    "main.css": "/UWLeaders/static/css/main.95a81a23.chunk.css",
+    "main.js": "/UWLeaders/static/js/main.4eb4856f.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.4eb4856f.chunk.js.map",
+    "runtime-main.js": "/UWLeaders/static/js/runtime-main.ede5627c.js",
+    "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.ede5627c.js.map",
+    "static/js/2.42c7cae5.chunk.js": "/UWLeaders/static/js/2.42c7cae5.chunk.js",
+    "static/js/2.42c7cae5.chunk.js.map": "/UWLeaders/static/js/2.42c7cae5.chunk.js.map",
+    "index.html": "/UWLeaders/index.html",
+    "precache-manifest.dcf0b4f195aabd4719cd809bb9334c3d.js": "/UWLeaders/precache-manifest.dcf0b4f195aabd4719cd809bb9334c3d.js",
+    "service-worker.js": "/UWLeaders/service-worker.js",
+    "static/css/main.95a81a23.chunk.css.map": "/UWLeaders/static/css/main.95a81a23.chunk.css.map",
+    "static/js/2.42c7cae5.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.42c7cae5.chunk.js.LICENSE.txt",
+    "static/media/logo-bg.png": "/UWLeaders/static/media/logo-bg.d2581bd3.png",
+    "static/media/logo-fg.png": "/UWLeaders/static/media/logo-fg.b3e164c4.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3368db2.js",
+    "static/js/runtime-main.ede5627c.js",
     "static/js/2.42c7cae5.chunk.js",
     "static/css/main.95a81a23.chunk.css",
-    "static/js/main.89b13e71.chunk.js"
+    "static/js/main.4eb4856f.chunk.js"
   ]
 }
