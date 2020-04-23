@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a1c79a4eaf88e30d10e5c009d5cde144",
+    "revision": "cdc827a5108011ba9287c82f0d1c228d",
     "url": "/UWLeaders/index.html"
   },
   {
-    "revision": "3b7dfb952a10a0db1e44",
-    "url": "/UWLeaders/static/css/main.e5a56f8e.chunk.css"
+    "revision": "d36de87cfd69b2efec4b",
+    "url": "/UWLeaders/static/css/main.d4675821.chunk.css"
   },
   {
-    "revision": "cdd74b281028c07ea217",
-    "url": "/UWLeaders/static/js/2.31d0e46e.chunk.js"
+    "revision": "90f12035704df7f64af5",
+    "url": "/UWLeaders/static/js/2.42c7cae5.chunk.js"
   },
   {
     "revision": "2b166f0dc6b3f9bdcafac7b7f10c4940",
-    "url": "/UWLeaders/static/js/2.31d0e46e.chunk.js.LICENSE.txt"
+    "url": "/UWLeaders/static/js/2.42c7cae5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b7dfb952a10a0db1e44",
-    "url": "/UWLeaders/static/js/main.ccdc6e7b.chunk.js"
+    "revision": "d36de87cfd69b2efec4b",
+    "url": "/UWLeaders/static/js/main.11bc74a3.chunk.js"
   },
   {
     "revision": "b77bfbe4cd745660b743",
