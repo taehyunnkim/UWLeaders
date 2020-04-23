@@ -11,6 +11,8 @@ class MentorsDashboard extends Component {
     loading: true
   }
 
+  // Implement feature where data is fetched only once
+  // https://stackoverflow.com/questions/52929417/fetch-data-only-once-per-react-component?rq=1
   componentDidMount = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     docRef.get().then(doc => {
@@ -66,6 +68,12 @@ class MentorsDashboard extends Component {
   render() {
     return (
       <div className='container'>
+        <UserContext.Consumer>
+          {auth => 
+            !this.state.loading && auth
+              ? <AddMentor mentors={this.state.mentors} handleChange={this.handleChange} />
+              : null}
+        </UserContext.Consumer>
         <div className='mentors'>
           {this.state.loading 
             ? <Loader type="Grid" color="#4b2e83" height={60} width={60} />
@@ -76,12 +84,6 @@ class MentorsDashboard extends Component {
                   </div>
                 )
           })}
-          <UserContext.Consumer>
-            {auth => 
-              !this.state.loading && auth
-                ? <AddMentor mentors={this.state.mentors} handleChange={this.handleChange} />
-                : null}
-          </UserContext.Consumer>
         </div>
       </div>
     )

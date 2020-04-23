@@ -245,34 +245,15 @@ nav li a:hover {
   white-space: pre-wrap;
 }
 
-.add-mentor {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -70px;
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 100px;
-}
-
-.mentor-textarea {
-  margin-top: 10px;
-  height: 100%;
-  resize: none;
-}
-
-input[type='text'] {
-  padding: 0px;
-}
-
-input[type="text"].major {
-  font-size:0.8em;
-  color: gray;
-}
-
 .password-container {
   width: 50vw;
   margin: 0 auto;
+}
+
+.mentor-textarea {
+  display: block;
+  margin: 20px 0px;
+  resize: none;
 }
 
 input[type="password"].password {
@@ -283,16 +264,91 @@ input[type="password"].password {
   text-align: center;
 }
 
-input[type=text]:not(.browser-default):focus:not([readonly]),
-input[type=email]:not(.browser-default):focus:not([readonly]),
-textarea.mentor-textarea:focus:not([readonly]){
-  border-color: black;
-  border-bottom-width: 1px;
-  box-shadow: none;
-}
-
 input[type=password]:not(.browser-default):focus:not([readonly]){
   border-color: #4b2e83;
   border-bottom-width: 2px;
   box-shadow: none;
+}
+
+/* ADD MENTOR */
+
+#add-container {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#add-container  button {
+  display: block;
+}
+
+#add-container form * {
+  margin: 10px auto;
+}
+
+#add-container input[type='text'] {
+  text-align: center;
+}
+
+input[type='text'].name {
+  font-size:1.4em;
+  font-weight: 400;
+}
+
+input[type="text"].major {
+  font-size:0.8em;
+  font-weight: 500;
+  color: gray;
+}
+
+/* EDITOR */
+
+input[type='text'] {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+textarea {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+textarea.mentor-textarea:focus:not([readonly]){
+  border-color: #4b2e83;
+  outline: none;
+  box-shadow: none;
+}
+
+/* PROGRAM */
+
+#program {
+  /* border: 1px solid black; */
+}
+
+#program > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+#program > section div {
+  width: 450px;
+  margin: 0px 50px;
+}
+
+#program .temp {
+  width: 450px;
+  height: 300px;
+  background-color: lightgray;
+  border-radius: 5px;
 }

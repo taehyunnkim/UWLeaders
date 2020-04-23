@@ -29,12 +29,12 @@ class HomeDashboard extends Component {
     const height = document.body.getBoundingClientRect().height;
 
     gsap.to(this.logoFg, 1, {
-        x: (e.pageX - width / 2) / width * 5,
+        x: (e.pageX - width / 2) / width * 15,
         y: (e.pageY - height / 2) / height * 15
     });
 
     gsap.to(this.logoBg, 1, {
-      x: (e.pageX - width / 2) / width * -5,
+      x: (e.pageX - width / 2) / width * -15,
       y: (e.pageY - height / 2) / height * -15
   });
   }

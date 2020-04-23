@@ -3,8 +3,8 @@ import { withFirebase } from '../firebase/firebase';
 
 class AddMentor extends Component {
   state = {
-    name: '',
-    major: '',
+    name: 'Name',
+    major: 'Major',
     description: ''
   };
 
@@ -20,7 +20,11 @@ class AddMentor extends Component {
     docRef.set({
       mentors: [...this.props.mentors, this.state]
     }).then(() => {
-      // window.location.reload(false);
+      this.setState({
+        name: 'Name',
+        major: 'Major',
+        description: ''
+      });
       console.log('Added a new mentor');
     }).catch(err => {
       console.log(err);
@@ -29,17 +33,22 @@ class AddMentor extends Component {
 
   render() {
     return (
-      <div className='card'>
-        <img className='mentor-img' alt='' />
-        <div className='card-content'>
-          <form>
-            <input placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
-            <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
-            <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='8' cols='37' wrap="hard"></textarea>
-            <input className='btn black add-mentor' onClick={this.handleClick} type='reset' value='Add'/>
-          </form>
+      <section id='add-container'>
+        <div className='card'>
+          <img className='mentor-img' alt='' />
+          <div className='card-content grey-text text-darken-3'>
+            <span className='card-title'>{this.state.name}</span>
+            <p className='grey-text'>{this.state.major}</p>
+          </div>
         </div>
-      </div>
+        <form>
+          <input className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
+          <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
+          <p>Mentor Description</p>
+          <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='15' cols='38' wrap="hard"></textarea>
+          <button className='btn black' onClick={this.handleClick} type='reset'>Add</button>
+        </form>
+      </section>
     )
   }
 }
