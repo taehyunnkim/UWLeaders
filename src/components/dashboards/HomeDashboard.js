@@ -16,9 +16,9 @@ class HomeDashboard extends Component {
       y: -30,
       ease: Power4
     });
-    gsap.to(this.btn, 0.5, {
+    gsap.to(this.join, 0.5, {
       opacity: 1,
-      delay: 0.6,
+      delay: 0.7,
       ease: Power4.easeIn
     });
     document.addEventListener('mousemove', this.parallax);
@@ -55,15 +55,19 @@ class HomeDashboard extends Component {
             {auth => 
               auth
                 ? <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
-                : <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Join Us</button>
+                : <div ref={div => (this.join = div)} className='join'>
+                    <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Join Us</button>
+                    <span>Application Open</span>
+                    <span>Due Sep.11</span>
+                  </div>
                 }
           </UserContext.Consumer>
         </div>
         <div ref={div => (this.img = div)} className='logo'>
-          <img ref={img => (this.logoFg = img)} src={logoFg} alt='uwleaders' />
-          <img ref={img => (this.logoBg = img)} src={logoBg} alt='uwleaders' />
+          <img ref={img => (this.logoFg = img)} src={logoFg} alt='uwleaders' draggable="false" />
+          <img ref={img => (this.logoBg = img)} src={logoBg} alt='uwleaders' draggable="false" />
         </div>
-        <img className='asuw' src={asuw} alt='asuw logo' />
+        <img className='asuw' src={asuw} alt='asuw logo' draggable="false" />
       </div>
     )
   }

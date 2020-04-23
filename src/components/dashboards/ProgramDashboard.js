@@ -15,6 +15,8 @@ export default function ProgramDashboard() {
         </div>
       </section>
       <section>
+        <div className='temp'></div>
+        <img className='' alt='' />
         <div>
           <h2>Develop Through Mentorship</h2>
           <p>
@@ -26,8 +28,6 @@ export default function ProgramDashboard() {
             connected networking and resource hub available to all students in the program. 
           </p>
         </div>
-        <div className='temp'></div>
-        <img className='' alt='' />
       </section>
       <section>
         <div className='temp'></div>
