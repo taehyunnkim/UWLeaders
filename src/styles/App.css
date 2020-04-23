@@ -94,12 +94,12 @@ button:focus {
 
 .homeBtn:after {
   content: "\2192";
-  margin-left: 15px;
+  margin-left: 10px;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .homeBtn:hover:after{
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .home {
@@ -131,6 +131,7 @@ button:focus {
   font-weight: 600;
   color: #b7a57a;
   font-size: 0.7em;
+  padding-left: 5px;
 }
 
 .join span:last-child {
