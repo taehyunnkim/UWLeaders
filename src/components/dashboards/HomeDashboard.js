@@ -43,6 +43,10 @@ class HomeDashboard extends Component {
     document.removeEventListener('mousemove', this.parallax);
   }
 
+  handleClick() {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSf5YFCmsLo7fbQoTvdwNtKr3azzfEI_TWU8k_wsW05EASAZ4A/closedform', '_blank');
+  }
+
   render(){
     return (
       <div className='home'>
@@ -56,9 +60,9 @@ class HomeDashboard extends Component {
               auth
                 ? <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
                 : <div ref={div => (this.join = div)} className='join'>
-                    <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Join Us</button>
-                    <span>Application Open</span>
-                    <span>Due Sep.11</span>
+                    <button className='btn-large homeBtn' onClick={this.handleClick}>Join Us</button>
+                    <span>Application Closed</span>
+                    {/* <span>Due Sep.11</span> */}
                   </div>
                 }
           </UserContext.Consumer>

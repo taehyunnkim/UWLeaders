@@ -1,11 +1,13 @@
 import React from 'react'
+import Leadership from '../../images/program/leadership.jpeg';
+import Community from '../../images/program/community.jpg';
+import Mentors from '../../images/program/mentors.jpg';
 
 export default function ProgramDashboard() {
   return (
     <div id='program'>
       <section>
-        <div className='temp'></div>
-        <img className='' alt='' />
+        <img alt='' src={Community} />
         <div>
           <h2>Find Your Community</h2>
           <p>
@@ -15,8 +17,7 @@ export default function ProgramDashboard() {
         </div>
       </section>
       <section>
-        <div className='temp'></div>
-        <img className='' alt='' />
+        <img alt='uwl mentors' src={Mentors} />
         <div>
           <h2>Develop Through Mentorship</h2>
           <p>
@@ -30,8 +31,7 @@ export default function ProgramDashboard() {
         </div>
       </section>
       <section>
-        <div className='temp'></div>
-        <img className='' alt='' />
+        <img alt='leaders' src={Leadership} />
         <div>
           <h2>Practice Leadership</h2>
           <p>
