@@ -577,6 +577,7 @@ textarea.mentor-textarea:focus:not([readonly]){
 
   .container {
     width: 90vw;
+    height: stretch;
   }
 
   .logo {
@@ -629,6 +630,7 @@ textarea.mentor-textarea:focus:not([readonly]){
 
   .btn-large {
     width: 130px;
+    padding: 15px 15px;
     font-size: 0.8em;
   }
 }
