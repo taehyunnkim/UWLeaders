@@ -13,7 +13,7 @@ export default function Navbar() {
           : <Link to={ROUTES.LANDING} className='title'><span>UW</span> Leaders</Link>
         }
       </UserContext.Consumer>
-      <ul className='right'>
+      <ul>
         <li><NavLink to={ROUTES.PROGRAM} activeClassName='active'>Program</NavLink></li>
         <li><NavLink to={ROUTES.MENTORS} activeClassName='active'>Mentors</NavLink></li>
         <li><NavLink to={ROUTES.CONTACT} activeClassName='active'>Contact</NavLink></li>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { gsap, Power4 } from 'gsap';
 import { UserContext } from '../session/session';
 import logoFg from '../../images/logo-fg.png';
-import asuw from '../../images/asuw.png';
 
 class HomeDashboard extends Component {
 
@@ -70,7 +69,6 @@ class HomeDashboard extends Component {
           <img ref={img => (this.logoFg = img)} src={logoFg} alt='uwleaders' draggable="false" />
           <div ref={div => (this.logoBg = div)}></div>
         </div>
-        <img className='asuw' src={asuw} alt='asuw logo' draggable="false" />
       </div>
     )
   }
