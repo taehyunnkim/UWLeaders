@@ -8,7 +8,8 @@ class AddMentor extends Component {
     description: '',
     url: '',
     file: null,
-    imgName: ''
+    imgName: '',
+    disabled: false
   };
 
   componentWillUnmount() {
@@ -26,7 +27,8 @@ class AddMentor extends Component {
   handleAddMentor = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     const storageRef = this.props.firebase.storage.ref();
-    const {file, ...omitted} = this.state;
+    const {file, disabled, ...omitted} = this.state;
+    this.setState({disabled: true});
     if (this.state.file) {
       storageRef.child(this.state.name).put(this.state.file).then(snapshot => {
         snapshot.ref.getDownloadURL()
@@ -63,8 +65,11 @@ class AddMentor extends Component {
       description: '',
       url: '',
       file: null,
-      imgName: ''
+      imgName: '',
+      disabled: false
     });
+    this.name.value = '';
+    this.major.value = '';
   }
 
 
@@ -102,15 +107,15 @@ class AddMentor extends Component {
           </div>
         </div>
         <form>
-          <input className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
-          <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
+          <input ref={input => {this.name = input;}} className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
+          <input ref={input => {this.major = input;}} className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
           <p>Mentor Description</p>
           <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='15' cols='38' wrap="hard"></textarea>
           {
             this.state.url === '' ? <button className='btn black' onClick={this.handleAddImage}>Add Image</button>
                                   : <button className='btn black' onClick={this.handleChangeImage}>Change Image</button>
           }
-          <button className='btn black' onClick={this.handleAddMentor} type='reset'>Add Mentor</button>
+          <button className='btn black' onClick={this.handleAddMentor} disabled={this.state.disabled} type='reset'>Add Mentor</button>
         </form>
       </section>
     )

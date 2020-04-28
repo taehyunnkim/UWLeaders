@@ -16,7 +16,7 @@ export default function MentorSummary({mentor, handleDelete, handleUpdate, toggl
           auth 
             ? <div className='card-update text-center'>
                 <button className='btn black' onClick={() => {handleUpdate(mentor.name)}}>Edit</button>
-                <button className='btn red' onClick={() => {handleDelete(mentor.name)}}>Delete</button>
+                <button className='btn red' onClick={() => {handleDelete(mentor.name, mentor.url)}}>Delete</button>
               </div>
             : null
         }

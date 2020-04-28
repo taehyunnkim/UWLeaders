@@ -8,7 +8,8 @@ class EditMentor extends Component {
     description: '',
     url: '',
     file: null,
-    imgName: ''
+    imgName: '',
+    disabled: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -36,8 +37,9 @@ class EditMentor extends Component {
   handleSaveMentor = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     const storageRef = this.props.firebase.storage.ref();
-    const {file, prevName, ...omitted} = this.state;
+    const {file, prevName, disabled, ...omitted} = this.state;
     let updatedMentors = this.props.mentors.filter(mentor => mentor.name !== this.state.prevName);
+    this.setState({disabled: true});
     if (this.state.file) {
       storageRef.child(this.state.name).put(this.state.file).then(snapshot => {
         snapshot.ref.getDownloadURL()
@@ -82,7 +84,8 @@ class EditMentor extends Component {
       description: '',
       url: '',
       file: null,
-      imgName: ''
+      imgName: '',
+      disabled: false
     });
   }
 
@@ -128,7 +131,7 @@ class EditMentor extends Component {
             this.state.url === '' ? <button className='btn black' onClick={this.handleAddImage}>Add Image</button>
                                   : <button className='btn black' onClick={this.handleChangeImage}>Change Image</button>
           }
-          <button className='btn black' onClick={this.handleSaveMentor} type='reset'>Save Changes</button>
+          <button className='btn black' onClick={this.handleSaveMentor} disabled={this.state.disabled} type='reset'>Save Changes</button>
         </form>
       </section>
     )

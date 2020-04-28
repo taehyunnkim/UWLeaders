@@ -42,7 +42,7 @@ class MentorsDashboard extends Component {
     this.setState({editMentor: {}});
   }
 
-  handleDelete = (name) => {
+  handleDelete = (name, url) => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     const storageRef = this.props.firebase.storage.ref();
     const updatedList = this.state.mentors.filter(mentor => {
@@ -56,8 +56,10 @@ class MentorsDashboard extends Component {
       console.log('Deleted ' + name);
       this.setState({mentors: updatedList});
     }).then(() => {
-      storageRef.child(name).delete()
-      .catch(err => console.log(err));
+      if (url !== '') {
+        storageRef.child(name).delete()
+        .catch(err => console.log(err));
+      }
     }).catch(err => {
       console.log(err);
     })
