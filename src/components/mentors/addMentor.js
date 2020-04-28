@@ -36,13 +36,20 @@ class AddMentor extends Component {
           docRef.set({
             mentors: [...this.props.mentors, omitted]
           }).then(() => {
-            console.log('Added a new mentor');
+            console.log('Added a new mentor with image');
             console.log(omitted);
             this.props.handleChange(omitted);
           }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
       });
+    } else {
+      docRef.set({
+        mentors: [...this.props.mentors, omitted]
+      }).then(() => {
+        console.log('Added a new mentor without image');
+        this.props.handleChange(omitted);
+      }).catch(err => console.log(err))
     }
 
     this.setState({
