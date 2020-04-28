@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withFirebase } from '../firebase/firebase';
 
-class AddMentor extends Component {
+class EditMentor extends Component {
   state = {
     name: 'Name',
     major: 'Major',
@@ -10,6 +10,16 @@ class AddMentor extends Component {
     file: null,
     imgName: ''
   };
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.edit !== this.props.edit) {
+      this.setState({...this.props.edit, prevName: this.props.edit.name});
+    }
+  }
+
+  componentDidMount() {
+    this.setState({...this.props.edit, prevName: this.props.edit.name});
+  }
 
   componentWillUnmount() {
     if(this.state.url !== '') {
@@ -23,10 +33,11 @@ class AddMentor extends Component {
     });
   }
 
-  handleAddMentor = () => {
+  handleSaveMentor = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     const storageRef = this.props.firebase.storage.ref();
-    const {file, ...omitted} = this.state;
+    const {file, prevName, ...omitted} = this.state;
+    let updatedMentors = this.props.mentors.filter(mentor => mentor.name !== this.state.prevName);
     if (this.state.file) {
       storageRef.child(this.state.name).put(this.state.file).then(snapshot => {
         snapshot.ref.getDownloadURL()
@@ -35,24 +46,32 @@ class AddMentor extends Component {
           omitted.imgName = this.state.name;
         })
         .then(() => {
+          console.log(omitted.imgName);
+          let update = [...updatedMentors, omitted];
           docRef.set({
-            mentors: [...this.props.mentors, omitted]
+            mentors: update
           }).then(() => {
-            console.log('Added a new mentor with image');
-            this.props.handleChange(omitted);
+            this.props.handleEdit([...updatedMentors, omitted]);
+          }).then(() => {
+            this.props.handleDelete(this.state.imgName);
             this.resetState();
+          }).then(() => {
+            this.props.resetEdit();
           }).catch(err => console.log(err))
         })
         .catch(err => console.log(err));
       });
     } else {
+      let update = [...updatedMentors, omitted];
       docRef.set({
-        mentors: [...this.props.mentors, omitted]
+        mentors: update
       }).then(() => {
-        console.log('Added a new mentor without image');
-        this.props.handleChange(omitted);
+        this.props.handleEdit([...updatedMentors, omitted]);
         this.resetState();
-      }).catch(err => console.log(err))
+      }).then(() => {
+        this.props.resetEdit();
+      }).catch(err => console.log(err));
+      console.log('Saved changes');
     }
   }
 
@@ -66,7 +85,6 @@ class AddMentor extends Component {
       imgName: ''
     });
   }
-
 
   handleAddImage = () => {
     this.fileInput.click();
@@ -102,19 +120,19 @@ class AddMentor extends Component {
           </div>
         </div>
         <form>
-          <input className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} />
-          <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} />
+          <input className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} value={this.state.name} />
+          <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} value={this.state.major} />
           <p>Mentor Description</p>
           <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='15' cols='38' wrap="hard"></textarea>
           {
             this.state.url === '' ? <button className='btn black' onClick={this.handleAddImage}>Add Image</button>
                                   : <button className='btn black' onClick={this.handleChangeImage}>Change Image</button>
           }
-          <button className='btn black' onClick={this.handleAddMentor} type='reset'>Add Mentor</button>
+          <button className='btn black' onClick={this.handleSaveMentor} type='reset'>Save Changes</button>
         </form>
       </section>
     )
   }
 }
 
-export default withFirebase(AddMentor);
+export default withFirebase(EditMentor);

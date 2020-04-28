@@ -56,7 +56,7 @@ class HomeDashboard extends Component {
           <UserContext.Consumer>
             {auth => 
               auth
-                ? <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
+                ? <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
                 : <div ref={div => (this.join = div)} className='join'>
                     <button className='btn-large homeBtn' onClick={this.handleClick}>Join Us</button>
                     <span>*Application Closed</span>

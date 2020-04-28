@@ -3,22 +3,22 @@ import MentorSummary from '../mentors/MentorSummary';
 import { withFirebase } from '../firebase/context';
 import UserContext from '../session/context';
 import AddMentor from '../mentors/AddMentor';
-import Loader from 'react-loader-spinner'
+import Loader from 'react-loader-spinner';
+import EditMentor from '../mentors/EditMentor';
 
 class MentorsDashboard extends Component {
   state = {
     mentors: [],
-    loading: true
+    loading: true,
+    editMentor: {}
   }
 
-  // Implement feature where data is fetched only once
-  // https://stackoverflow.com/questions/52929417/fetch-data-only-once-per-react-component?rq=1
   componentDidMount = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     docRef.get().then(doc => {
       if (doc.exists) {
           const mentors = doc.data().mentors;
-          this.setState({mentors, loading: !this.state.loading});
+          this.setState({mentors, loading: false});
       } else {
           console.log("No such document!");
       }
@@ -31,43 +31,78 @@ class MentorsDashboard extends Component {
     this.setState({mentors: [...this.state.mentors, newMentor]});
   }
 
+  handleEdit = (updatedMentors) => {
+    this.setState({mentors: updatedMentors});
+  }
+
+  resetEdit = () => {
+    this.setState({editMentor: {}});
+  }
+
   handleDelete = (name) => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
     const storageRef = this.props.firebase.storage.ref();
     const updatedList = this.state.mentors.filter(mentor => {
+      // Maybe do something here instead of using findMentor()
       return name !== mentor.name;
     });
 
-    storageRef.child(name).delete()
-    .then(() => {
-      docRef.set({
-        mentors: updatedList
-      }).then(() => {
-        console.log('Deleted ' + name);
-        this.setState({mentors: updatedList});
-      }).catch(err => {
-        console.log(err);
-      })
+    docRef.set({
+      mentors: updatedList
+    }).then(() => {
+      console.log('Deleted ' + name);
+      this.setState({mentors: updatedList});
+    }).then(() => {
+      storageRef.child(name).delete()
+      .catch(err => console.log(err));
+    }).catch(err => {
+      console.log(err);
     })
+  }
+
+  handleDeleteImage = (name) => {
+    const storageRef = this.props.firebase.storage.ref();
+    storageRef.child(name).delete()
+    .then(() => console.log('Deleted image from firebase'))
     .catch(err => console.log(err));
   }
 
   handleUpdate = (name) => {
-    
+    let mentorObj = {};
+    mentorObj = this.findMentor(name);
+    this.setState({editMentor: mentorObj});
+  }
+
+  findMentor = (name) => {
+    for (let i = 0; i < this.state.mentors.length; i++) {
+      if (this.state.mentors[i].name === name) {
+        return this.state.mentors[i];
+      }
+    }
+
+    return null;
   }
 
   render() {
     return (
       <div className='container'>
         <UserContext.Consumer>
-          {auth => 
-            !this.state.loading && auth
-              ? <AddMentor mentors={this.state.mentors} handleChange={this.handleChange} />
-              : null}
+          {auth => {
+            if(!this.state.loading && auth) {
+              if(Object.keys(this.state.editMentor).length !== 0) {
+                return <EditMentor mentors={this.state.mentors} handleEdit={this.handleEdit} edit={this.state.editMentor} resetEdit={this.resetEdit} handleDelete={this.handleDeleteImage} />
+              } else {
+                return <AddMentor mentors={this.state.mentors} handleChange={this.handleChange} />
+              }
+            } else {
+              return null;
+            }
+          }
+          }
         </UserContext.Consumer>
         <div className='mentors'>
           {this.state.loading 
-            ? <Loader type="Grid" color="#4b2e83" height={60} width={60} />
+            ? <div style={{marginTop: '70px'}}><Loader type="ThreeDots" color="#b7a57a" height={50} width={50} /></div>
             : this.state.mentors && this.state.mentors.map(mentor => {
                 return(
                   <div key={mentor.name}>
