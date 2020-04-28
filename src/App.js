@@ -9,7 +9,6 @@ import ProgramDashboard from './components/dashboards/ProgramDashboard';
 import MentorsDashboard from './components/dashboards/MentorsDashboard';
 import ContactDashboard from './components/dashboards/ContactDashboard';
 import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
 import AddMentor from './components/mentors/AddMentor';
 import LogIn from './components/auth/LogIn';
 
@@ -46,7 +45,6 @@ class App extends Component {
               <Route path={ROUTES.ADD} component={AddMentor} />
               <Route path={ROUTES.ADMIN} component={LogIn} />
             </Switch>
-            <Footer />
           </div>
         </HashRouter>
       </UserContext.Provider>

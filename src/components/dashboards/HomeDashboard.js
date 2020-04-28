@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { gsap, Power4 } from 'gsap';
 import { UserContext } from '../session/session';
 import logoFg from '../../images/logo-fg.png';
+import Footer from '../layout/Footer';
 
 class HomeDashboard extends Component {
 
@@ -47,28 +48,31 @@ class HomeDashboard extends Component {
 
   render(){
     return (
-      <div className='home'>
-        <div>
-          <section ref={section => (this.content = section)}>
-            <h1>Leaders Are <strong>Made</strong></h1>
-            <h1>Not Born.</h1>
-          </section>
-          <UserContext.Consumer>
-            {auth => 
-              auth
-                ? <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
-                : <div ref={div => (this.join = div)} className='join'>
-                    <button className='btn-large homeBtn' onClick={this.handleClick}>Join Us</button>
-                    <span>*Application Closed</span>
-                    {/* <span>Due Sep.11</span> */}
-                  </div>
-                }
-          </UserContext.Consumer>
+      <div id='dashboard'>
+        <div className='home'>
+          <div>
+            <section ref={section => (this.content = section)}>
+              <h1>Leaders Are <strong>Made</strong></h1>
+              <h1>Not Born.</h1>
+            </section>
+            <UserContext.Consumer>
+              {auth => 
+                auth
+                  ? <button className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
+                  : <div ref={div => (this.join = div)} className='join'>
+                      <button className='btn-large homeBtn' onClick={this.handleClick}>Join Us</button>
+                      <span>*Application Closed</span>
+                      {/* <span>Due Sep.11</span> */}
+                    </div>
+                  }
+            </UserContext.Consumer>
+          </div>
+          <div ref={div => (this.img = div)} className='logo'>
+            <img ref={img => (this.logoFg = img)} src={logoFg} alt='uwleaders' draggable="false" />
+            <div ref={div => (this.logoBg = div)}></div>
+          </div>
         </div>
-        <div ref={div => (this.img = div)} className='logo'>
-          <img ref={img => (this.logoFg = img)} src={logoFg} alt='uwleaders' draggable="false" />
-          <div ref={div => (this.logoBg = div)}></div>
-        </div>
+        <Footer />
       </div>
     )
   }

@@ -5,12 +5,15 @@ import UserContext from '../session/context';
 import AddMentor from '../mentors/AddMentor';
 import Loader from 'react-loader-spinner';
 import EditMentor from '../mentors/EditMentor';
+import Popup from '../mentors/Popup';
 
 class MentorsDashboard extends Component {
   state = {
     mentors: [],
     loading: true,
-    editMentor: {}
+    editMentor: {},
+    showPopup: false,
+    popupData: {}
   }
 
   componentDidMount = () => {
@@ -83,7 +86,22 @@ class MentorsDashboard extends Component {
     return null;
   }
 
+  popupData = (mentor) => {
+    this.setState({popupData: mentor});
+  }
+
+  popupToggle = () => {
+    this.setState({showPopup: !this.state.showPopup});
+  }
+
   render() {
+    let showPopup = this.state.showPopup;
+    let popup;
+    if (showPopup) {
+      popup = <Popup mentor={this.state.popupData} toggle={this.popupToggle} />;
+    } else {
+      popup = null;
+    }
     return (
       <div className='container'>
         <UserContext.Consumer>
@@ -106,11 +124,12 @@ class MentorsDashboard extends Component {
             : this.state.mentors && this.state.mentors.map(mentor => {
                 return(
                   <div key={mentor.name}>
-                    <MentorSummary mentor={mentor} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate} />
+                    <MentorSummary mentor={mentor} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate} toggle={this.popupToggle} popupData={this.popupData} />
                   </div>
                 )
           })}
         </div>
+        {popup}
       </div>
     )
   }

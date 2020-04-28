@@ -123,7 +123,7 @@ class EditMentor extends Component {
           <input className='name' placeholder="Name" autoComplete="off" type='text' id='name' onChange={this.handleChange} value={this.state.name} />
           <input className='major' placeholder="Major" autoComplete="off" type='text' id='major' onChange={this.handleChange} value={this.state.major} />
           <p>Mentor Description</p>
-          <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='15' cols='38' wrap="hard"></textarea>
+          <textarea className='mentor-textarea' id='description' onChange={this.handleChange} rows='15' cols='38' wrap="hard" value={this.state.description}></textarea>
           {
             this.state.url === '' ? <button className='btn black' onClick={this.handleAddImage}>Add Image</button>
                                   : <button className='btn black' onClick={this.handleChangeImage}>Change Image</button>
