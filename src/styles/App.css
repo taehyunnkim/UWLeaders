@@ -238,8 +238,9 @@ footer {
 }
 
 .mentor-img {
+  background-size: cover;
+  background-origin: center;
   margin: 10px;
-  object-fit: cover;
   background-color: lightgray;
   width: 230px;
   height: 300px;
@@ -359,12 +360,12 @@ nav span:first-child {
   text-align: center;
 }
 
-#add-container  button {
-  display: block;
-}
-
 #add-container form * {
   margin: 10px auto;
+}
+
+#add-container  button {
+  margin: 0 10px;
 }
 
 #add-container input[type='text'] {
@@ -386,6 +387,10 @@ input[type="text"].major {
   display: block;
   margin: 20px 0px;
   resize: none;
+}
+
+#mentor-image {
+  background-size: cover;
 }
 
 /* EDITOR */

@@ -80,7 +80,7 @@ class MentorsDashboard extends Component {
             : this.state.mentors && this.state.mentors.map(mentor => {
                 return(
                   <div key={mentor.name}>
-                    <MentorSummary mentor={mentor} imgRef={mentor.name.replace(/\s+/g,'').toLowerCase()} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate} />
+                    <MentorSummary mentor={mentor} handleDelete={this.handleDelete} handleUpdate={this.handleUpdate} />
                   </div>
                 )
           })}

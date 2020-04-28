@@ -1,11 +1,11 @@
 import React from 'react'
 import UserContext from '../session/context'
 
-export default function MentorSummary({mentor, imgRef, handleDelete, handleUpdate}) {
+export default function MentorSummary({mentor, handleDelete, handleUpdate}) {
   return (
     <div>
       <div className='card z-dept-0 project-summary'>
-        <div className='mentor-img'></div>
+        <div className='mentor-img' style={{backgroundImage: 'url(' + mentor.url + ')'}}></div>
         <div className='card-content grey-text text-darken-3'>
           <span className='card-title'>{mentor.name}</span>
           <p className='grey-text'>{mentor.major}</p>
