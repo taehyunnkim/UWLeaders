@@ -59,7 +59,7 @@ class HomeDashboard extends Component {
                 ? <button ref={button => (this.btn = button)} className='btn-large homeBtn' onClick={this.props.handleSignout}>Sign Out</button>
                 : <div ref={div => (this.join = div)} className='join'>
                     <button className='btn-large homeBtn' onClick={this.handleClick}>Join Us</button>
-                    <span>Application Closed</span>
+                    <span>*Application Closed</span>
                     {/* <span>Due Sep.11</span> */}
                   </div>
                 }
