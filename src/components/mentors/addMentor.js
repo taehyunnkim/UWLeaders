@@ -71,11 +71,16 @@ class AddMentor extends Component {
   }
 
   handleFile = (e) => {
-    const url = URL.createObjectURL(e.target.files[0]);
-    this.setState({
-      url: url,
-      file: e.target.files[0]
-    });
+    const file = e.target.files[0];
+    if(file && file['type'].split('/')[0] === 'image') {
+      const url = URL.createObjectURL(file);
+      this.setState({
+        url: url,
+        file: e.target.files[0]
+      });
+    } else {
+      console.log('Cancelled or not a valid file');
+    }
   }
 
   render() {
