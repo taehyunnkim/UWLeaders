@@ -6,7 +6,8 @@ class AddMentor extends Component {
     name: 'Name',
     major: 'Major',
     description: '',
-    url: ''
+    url: '',
+    file: null
   };
 
   componentWillUnmount() {
@@ -23,20 +24,34 @@ class AddMentor extends Component {
 
   handleAddMentor = () => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
-    this.props.handleChange(this.state);
-    docRef.set({
-      mentors: [...this.props.mentors, this.state]
-    }).then(() => {
-      this.setState({
-        name: 'Name',
-        major: 'Major',
-        description: '',
-        url: ''
+    const storageRef = this.props.firebase.storage.ref();
+    const {file, ...omitted} = this.state;
+    if (this.state.file) {
+      storageRef.child(this.state.name).put(this.state.file).then(snapshot => {
+        snapshot.ref.getDownloadURL()
+        .then(url => {
+          omitted.url = url;
+        })
+        .then(() => {
+          docRef.set({
+            mentors: [...this.props.mentors, omitted]
+          }).then(() => {
+            console.log('Added a new mentor');
+            console.log(omitted);
+            this.props.handleChange(omitted);
+          }).catch(err => console.log(err))
+        })
+        .catch(err => console.log(err));
       });
-      console.log('Added a new mentor');
-    }).catch(err => {
-      console.log(err);
-    })
+    }
+
+    this.setState({
+      name: 'Name',
+      major: 'Major',
+      description: '',
+      url: '',
+      file: null
+    });
   }
 
   handleAddImage = () => {
@@ -51,7 +66,8 @@ class AddMentor extends Component {
   handleFile = (e) => {
     const url = URL.createObjectURL(e.target.files[0]);
     this.setState({
-      url: url
+      url: url,
+      file: e.target.files[0]
     });
   }
 

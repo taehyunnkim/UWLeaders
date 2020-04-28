@@ -27,42 +27,33 @@ class MentorsDashboard extends Component {
     });
   }
 
-  handleChange = (mentor) => {
-    this.setState({mentors: [...this.state.mentors, mentor]}, console.log(this.state));
+  handleChange = (newMentor) => {
+    this.setState({mentors: [...this.state.mentors, newMentor]});
   }
 
   handleDelete = (name) => {
     const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
+    const storageRef = this.props.firebase.storage.ref();
     const updatedList = this.state.mentors.filter(mentor => {
       return name !== mentor.name;
     });
 
-    docRef.set({
-      mentors: updatedList
-    }).then(() => {
-      console.log('Deleted ' + name);
-      this.setState({mentors: updatedList});
-    }).catch(err => {
-      console.log(err);
+    storageRef.child(name).delete()
+    .then(() => {
+      docRef.set({
+        mentors: updatedList
+      }).then(() => {
+        console.log('Deleted ' + name);
+        this.setState({mentors: updatedList});
+      }).catch(err => {
+        console.log(err);
+      })
     })
-
+    .catch(err => console.log(err));
   }
 
   handleUpdate = (name) => {
-    const docRef = this.props.firebase.firestore.collection('uwl').doc('mentors');
-    const updatedList = this.state.mentors.filter(mentor => {
-      return name !== mentor.name;
-    });
-
-    docRef.set({
-      mentors: updatedList
-    }).then(() => {
-      console.log('Deleted ' + name);
-      this.setState({mentors: updatedList});
-    }).catch(err => {
-      console.log(err);
-    })
-
+    
   }
 
   render() {
