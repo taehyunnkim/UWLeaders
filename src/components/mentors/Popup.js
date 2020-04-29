@@ -3,10 +3,7 @@ import { gsap, Power4 } from 'gsap';
 
 export default class Popup extends Component  {
   componentDidMount() {
-    gsap.from(this.bg, 0.5, {
-      opacity: 0,
-      ease: Power4
-    });
+    this.bg.style.opacity = 1;
     
     gsap.from(this.popup, 0.5, {
       y: -100,
@@ -18,7 +15,7 @@ export default class Popup extends Component  {
   componentWillUnmount() {
 
   }
-
+  
   render() {
     return (
       <div>
@@ -33,21 +30,7 @@ export default class Popup extends Component  {
                 <h2>{this.props.mentor.major}</h2>
                 <p>{this.props.mentor.description}</p>
               </div>
-              <button className='btn-pop black' onClick={() => 
-                {
-                  Promise.all([
-                    gsap.to(this.popup, 0.3, {
-                      y: 100,
-                      opacity: 0,
-                      ease: Power4
-                    }),
-                    gsap.to(this.bg, 0.3, {
-                      opacity: 0,
-                      ease: Power4
-                    })
-                  ]).then(() => this.props.toggle())
-                }
-              }>Close</button>
+              <button className='btn-pop black' onClick={this.props.toggle}>Close</button>
             </section>
           </div>  
         </div>  
