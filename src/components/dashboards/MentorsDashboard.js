@@ -74,6 +74,7 @@ class MentorsDashboard extends Component {
 
   handleUpdate = (name) => {
     let mentorObj = {};
+    window.scrollTo(0, 0);
     mentorObj = this.findMentor(name);
     this.setState({editMentor: mentorObj});
   }
