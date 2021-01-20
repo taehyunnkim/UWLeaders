@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.14.1",
     "gh-pages": "^2.2.0",
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
