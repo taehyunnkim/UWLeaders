@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.f3f63901.chunk.css",
-    "main.js": "/static/js/main.03036ca7.chunk.js",
-    "main.js.map": "/static/js/main.03036ca7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f3368db2.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f3368db2.js.map",
-    "static/js/2.694c43aa.chunk.js": "/static/js/2.694c43aa.chunk.js",
-    "static/js/2.694c43aa.chunk.js.map": "/static/js/2.694c43aa.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d06e386fada1ba2f96568de152451d84.js": "/precache-manifest.d06e386fada1ba2f96568de152451d84.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.f3f63901.chunk.css.map": "/static/css/main.f3f63901.chunk.css.map",
-    "static/js/2.694c43aa.chunk.js.LICENSE.txt": "/static/js/2.694c43aa.chunk.js.LICENSE.txt",
-    "static/media/asuw.png": "/static/media/asuw.77cdeb09.png",
-    "static/media/community.jpg": "/static/media/community.89467ad4.jpg",
-    "static/media/leadership.jpeg": "/static/media/leadership.934bb858.jpeg",
-    "static/media/logo-fg.png": "/static/media/logo-fg.9247f79a.png",
-    "static/media/mentors.jpg": "/static/media/mentors.d1acafee.jpg"
+    "main.css": "/UWLeaders/static/css/main.0c9385b3.chunk.css",
+    "main.js": "/UWLeaders/static/js/main.1b812678.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.1b812678.chunk.js.map",
+    "runtime-main.js": "/UWLeaders/static/js/runtime-main.1c949873.js",
+    "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.1c949873.js.map",
+    "static/js/2.bc18f87c.chunk.js": "/UWLeaders/static/js/2.bc18f87c.chunk.js",
+    "static/js/2.bc18f87c.chunk.js.map": "/UWLeaders/static/js/2.bc18f87c.chunk.js.map",
+    "index.html": "/UWLeaders/index.html",
+    "precache-manifest.51d24c8024411480dd9c77eef3c6a40e.js": "/UWLeaders/precache-manifest.51d24c8024411480dd9c77eef3c6a40e.js",
+    "service-worker.js": "/UWLeaders/service-worker.js",
+    "static/css/main.0c9385b3.chunk.css.map": "/UWLeaders/static/css/main.0c9385b3.chunk.css.map",
+    "static/js/2.bc18f87c.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.bc18f87c.chunk.js.LICENSE.txt",
+    "static/media/asuw.png": "/UWLeaders/static/media/asuw.77cdeb09.png",
+    "static/media/community.jpg": "/UWLeaders/static/media/community.89467ad4.jpg",
+    "static/media/leadership.jpeg": "/UWLeaders/static/media/leadership.934bb858.jpeg",
+    "static/media/logo-fg.png": "/UWLeaders/static/media/logo-fg.9247f79a.png",
+    "static/media/mentors.jpg": "/UWLeaders/static/media/mentors.d1acafee.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f3368db2.js",
-    "static/js/2.694c43aa.chunk.js",
-    "static/css/main.f3f63901.chunk.css",
-    "static/js/main.03036ca7.chunk.js"
+    "static/js/runtime-main.1c949873.js",
+    "static/js/2.bc18f87c.chunk.js",
+    "static/css/main.0c9385b3.chunk.css",
+    "static/js/main.1b812678.chunk.js"
   ]
 }
