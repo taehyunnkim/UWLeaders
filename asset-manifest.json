@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/UWLeaders/static/css/main.0c9385b3.chunk.css",
-    "main.js": "/UWLeaders/static/js/main.772a94f6.chunk.js",
-    "main.js.map": "/UWLeaders/static/js/main.772a94f6.chunk.js.map",
+    "main.js": "/UWLeaders/static/js/main.db5f98d4.chunk.js",
+    "main.js.map": "/UWLeaders/static/js/main.db5f98d4.chunk.js.map",
     "runtime-main.js": "/UWLeaders/static/js/runtime-main.1c949873.js",
     "runtime-main.js.map": "/UWLeaders/static/js/runtime-main.1c949873.js.map",
     "static/js/2.bc18f87c.chunk.js": "/UWLeaders/static/js/2.bc18f87c.chunk.js",
     "static/js/2.bc18f87c.chunk.js.map": "/UWLeaders/static/js/2.bc18f87c.chunk.js.map",
     "index.html": "/UWLeaders/index.html",
-    "precache-manifest.39a3b76e1fcd7de93be461c3e01032a7.js": "/UWLeaders/precache-manifest.39a3b76e1fcd7de93be461c3e01032a7.js",
+    "precache-manifest.cece54cdbc43c3664752d013659305ee.js": "/UWLeaders/precache-manifest.cece54cdbc43c3664752d013659305ee.js",
     "service-worker.js": "/UWLeaders/service-worker.js",
     "static/css/main.0c9385b3.chunk.css.map": "/UWLeaders/static/css/main.0c9385b3.chunk.css.map",
     "static/js/2.bc18f87c.chunk.js.LICENSE.txt": "/UWLeaders/static/js/2.bc18f87c.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.1c949873.js",
     "static/js/2.bc18f87c.chunk.js",
     "static/css/main.0c9385b3.chunk.css",
-    "static/js/main.772a94f6.chunk.js"
+    "static/js/main.db5f98d4.chunk.js"
   ]
 }
